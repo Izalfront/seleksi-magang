@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+      .active {
+        background-color: rgb(241 245 249 / var(--tw-bg-opacity));
+        color: rgb(29 78 216 / var(--tw-text-opacity));
+        border-radius: 30px;
+      }
+      .custom-margin {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+      .shadow-smooth {
+        box-shadow: 0px 10px 29px -20px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body class="flex bg-blue-800">
+    <!-- Sidebar -->
+    <aside class="bg-blue-800 text-white w-72 min-h-screen">
+      <nav>
+        <ul class="space-y-2 mt-12 mb-12">
+          <h1 class="block text-lg font-semibold pb-5 pl-6 ml-3">Logo</h1>
+          <hr class="mx-8 border opacity-10" />
+          <li>
+            <a href="#" class="nav-item block text-base font-semibold py-3 px-4 pl-6 ml-3 mt-8 text-white hover:bg-white hover:bg-opacity-5 hover:text-white hover:rounded-md" onclick="setActive(this, event)">Dashboard</a>
+          </li>
+          <li><a href="profile.html" class="nav-item block text-base font-semibold py-3 px-4 pl-6 ml-3 text-white hover:bg-white hover:bg-opacity-5 hover:text-white hover:rounded-md" onclick="setActive(this, event)">Profile</a></li>
+          <li>
+            <a href="pembimbing-lapangan.html" class="nav-item block text-base font-semibold py-3 px-4 pl-6 ml-3 text-white hover:bg-white hover:bg-opacity-5 hover:text-white hover:rounded-md" onclick="setActive(this)"
+              >Pembimbing Lapangan</a
+            >
+          </li>
+          <li><a href="dospem.html" class="nav-item block text-base font-semibold py-3 px-4 pl-6 ml-3 text-white hover:bg-white hover:bg-opacity-5 hover:text-white hover:rounded-md" onclick="setActive(this)">Dosen Pembimbing</a></li>
+        </ul>
+        <hr class="mx-8 mb-8 border opacity-10" />
+        <ul class="space-y-2 mt-5">
+          <li><a href="#" class="nav-item block text-base font-semibold py-3 px-4 pl-6 ml-3 text-white hover:bg-white hover:bg-opacity-5 hover:text-white hover:rounded-md" onclick="setActive(this)">Log Out</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <!-- end sidebar -->
+    <!-- Content -->
+    <div class="bg-slate-100 w-full rounded-3xl mx-5 my-5">
+      <main class="flex-1 p-4 flex flex-col items-start">
+        <div class="flex">
+          <h1 class="text-sm font-medium mt-2 font-sans mb-5 text-slate-600">Aplikasi</h1>
+          <span class="material-symbols-outlined flex items-center justify-center opacity-60 mt-1.5 ml-1">chevron_right</span>
+          <h1 class="text-sm font-medium mt-2 font-sans mb-5 text-slate-600 mr-80">Dashboard</h1>
+          <div class="ml-96 flex">
+            <div class="flex items-center">
+              <input class="pl-12 pr-3 py-1.5 mb-3 bg-slate-200 rounded-full focus:outline-none" type="text" name="cari" id="cari" placeholder="Cari..." />
+              <span class="material-symbols-outlined opacity-40 ml-3 absolute mb-3"> search </span>
+            </div>
+            <div class="image mt-1 ml-8">
+              <img src="./img/portrait-man-laughing.jpg" alt="profile" width="30px" class="rounded-full" />
+            </div>
+          </div>
+        </div>
+        <div class="w-full border-t pb-5 border-slate-200"></div>
+        <!-- card content -->
+        <!-- card LTE -->
+        <div class="flex mb-5">
+          <div class="grid grid-cols-3 space-x-4">
+            <div class="relative card px-6 py-6 bg-white rounded-md shadow-smooth">
+              <span class="material-symbols-outlined text-orange-600 mb-3"> supervisor_account </span>
+              <h1 class="text-sm font-medium">Pembimbing Lapangan</h1>
+              <p class="text-sm font-sans text-slate-500">Hasbi Rajab M.Kom</p>
+            </div>
+            <div class="relative card px-6 py-6 bg-white rounded-md shadow-smooth">
+              <span class="material-symbols-outlined text-orange-600 mb-3"> supervisor_account </span>
+              <h1 class="text-sm font-medium">Dosen Pembimbing</h1>
+              <p class="text-sm font-sans text-slate-500">Hasan M.Kom</p>
+            </div>
+          </div>
+        </div>
+        <!-- card LTE -->
+
+        <div class="judul mt-5 mb-3 w-full">
+          <div class="flex justify-between">
+            <h1 class="text-slate-700 font-medium mt-1">Laporan Harian</h1>
+            <div class="print flex space-x-4">
+              <div class="pdf bg-blue-700 px-4 py-2 flex mb-3 cursor-pointer rounded-md shadow-smooth">
+                <span class="material-symbols-outlined text-white"> picture_as_pdf </span>
+                <p class="text-xs font-medium mt-0.5 ml-1 rounded-sm text-white">Export PDF</p>
+              </div>
+              <div class="excel bg-blue-700 px-4 py-2 flex mb-3 cursor-pointer rounded-md shadow-smooth">
+                <span class="material-symbols-outlined text-white"> picture_as_pdf </span>
+                <p class="text-xs font-medium mt-0.5 ml-1 rounded-sm text-white">Export Excel</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="isi-tabel mt-5">
+            <div class="isi flex justify-between">
+              <table class="w-full">
+                <thead>
+                  <tr class="relative">
+                    <th class="py-5 px-3 text-start font-medium text-gray-600">Nama</th>
+                    <th class="py-5 px-3 text-start font-medium text-gray-600">Aktivitas</th>
+                    <th class="py-5 px-5 text-start font-medium text-gray-600">Tanggal Aktivitas</th>
+                    <th class="py-5 px-5 text-start font-medium text-gray-600">Hasil</th>
+                    <th class="py-5 px-5 text-start font-medium text-gray-600">Status</th>
+                  </tr>
+                </thead>
+                <tbody class="space-y-6">
+                  <div class="translate-y-50">
+                    <tr class="relative card px-6 py-7 bg-white rounded-sm mt-6 max-w-full shadow-smooth" style="margin-top: 1.5rem; margin-bottom: 1.5rem">
+                      <td class="py-5 px-3 text-start text-gray-600 font-normal">Muhammad Rizal Wahyudi</td>
+                      <td class="py-5 px-3 text-start text-gray-600 font-normal">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, temporibus.</td>
+                      <td class="py-5 px-5 text-start text-gray-600 font-normal">10 - 12 - 2023</td>
+                      <td class="py-5 px-5 text-start text-gray-600 font-normal">Tercapai 100%</td>
+                      <td class="py-5 px-5 text-center my-5 text-gray-600 font-normal">
+                        <div class="bg-green-200 text-green-600 rounded-lg font-normal" style="max-width: 60px">Acc</div>
+                      </td>
+                    </tr>
+                  </div>
+                  <div class="translate-y-50">
+                    <tr class="relative card px-6 py-7 bg-white rounded-sm mt-6 max-w-full shadow-smooth" style="margin-top: 1.5rem; margin-bottom: 1.5rem">
+                      <td class="py-5 px-3 text-start text-gray-600 font-normal">Muhammad Rizal Wahyudi</td>
+                      <td class="py-5 px-3 text-start text-gray-600 font-normal">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, temporibus.</td>
+                      <td class="py-5 px-5 text-start text-gray-600 font-normal">10 - 12 - 2023</td>
+                      <td class="py-5 px-5 text-start text-gray-600 font-normal">Tercapai 100%</td>
+                      <td class="py-5 px-5 text-center my-5 text-gray-600 font-normal">
+                        <div class="bg-orange-200 text-orange-600 rounded-lg font-normal px-3 text-center" style="max-width: 60px">Belum</div>
+                      </td>
+                    </tr>
+                  </div>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- tambah logbook -->
+
+        <div class="input mt-12 grid grid-cols-2 space-x-4 rounded-md mb-5">
+          <div class="form inputan">
+            <h1 class="font-medium text-slate-600">Input Aktivitas Harian</h1>
+            <div class="relative card px-6 py-6 bg-white rounded-md mt-6 shadow-smooth">
+              <form action="" method="get" class="pr-5">
+                <div class="block my-4">
+                  <label for="" class="block mb-2 text-slate-700">Nama</label>
+                  <input type="text" placeholder="Nama Lengkap" class="bg-white border border-slate-200 pr-28 px-3 py-2 rounded-sm focus:outline-none" />
+                </div>
+                <div class="block my-4">
+                  <label for="" class="block mb-2 text-slate-700">Tanggal Aktivitas</label>
+                  <input type="text" placeholder="Tanggal Aktivitas" class="bg-white border border-slate-200 pr-28 px-3 py-2 rounded-sm focus:outline-none" />
+                </div>
+                <div class="block my-4">
+                  <label for="" class="block mb-2 text-slate-700">Hasil</label>
+                  <input type="text" placeholder="Hasil" class="bg-white border border-slate-200 pr-28 px-3 py-2 rounded-sm focus:outline-none" />
+                </div>
+                <div class="block my-4">
+                  <label for="" class="block mb-2 text-slate-700">Aktivitas</label>
+                  <textarea name="aktivitas" id="" cols="23" rows="5" class="bg-white border border-slate-200 pr-28 px-3 py-2 rounded-sm focus:outline-none"></textarea>
+                </div>
+                <div class="block my-4 space-x-2">
+                  <a href="#" class="bg-white px-6 py-2 text-slate-500 border border-slate-300 font-medium text-sm rounded-md">Cancel</a>
+                  <a href="#" class="bg-blue-700 px-6 py-2 text-white font-medium text-sm rounded-md">Simpan</a>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="calendar">
+            <h1 class="font-medium text-slate-600">Kalender Harian</h1>
+            <div class="relative card px-6 pr-3 py-16 bg-white rounded-md mt-6 shadow-smooth">
+              <div class="calendar">
+                <div class="grid grid-cols-7 gap-4">
+                  <div class="text-center">Minggu</div>
+                  <div class="text-center">Senin</div>
+                  <div class="text-center">Selasa</div>
+                  <div class="text-center">Rabu</div>
+                  <div class="text-center">Kamis</div>
+                  <div class="text-center">Jumat</div>
+                  <div class="text-center">Sabtu</div>
+
+                  <!-- Isi Kegiatan -->
+                  <!-- Misalnya, Kegiatan pada tanggal 5 -->
+                  <div class="col-span-1"><span class="text-sm text-red-500">3</span></div>
+                  <div class="col-span-1"><span class="text-sm">4</span></div>
+                  <div class="col-span-1"><span class="text-sm">5</span></div>
+                  <!-- Hari Minggu -->
+                  <div class="col-span-1">
+                    <div class="bg-blue-500 text-white p-2 rounded-md"><span class="text-sm">6</span></div>
+                    <div class="mt-2 text-sm">Kegiatan A</div>
+                  </div>
+                  <div class="col-span-1"><span class="text-sm">7</span></div>
+                  <div class="col-span-1"><span class="text-sm">8</span></div>
+                  <div class="col-span-1"><span class="text-sm">9</span></div>
+                  <div class="col-span-1"><span class="text-sm text-red-500">10</span></div>
+                  <!-- Hari Sabtu -->
+
+                  <!-- Misalnya, Kegiatan pada tanggal 15 -->
+                  <div class="col-span-1"><span class="text-sm">11</span></div>
+                  <!-- Hari Minggu -->
+                  <div class="col-span-1"><span class="text-sm">12</span></div>
+                  <div class="col-span-1"><span class="text-sm">13</span></div>
+                  <div class="col-span-1">
+                    <div class="bg-green-500 text-white p-2 rounded-md"><span class="text-sm">14</span></div>
+                    <div class="mt-2 text-sm">Kegiatan B</div>
+                  </div>
+                  <div class="col-span-1"><span class="text-sm">17</span></div>
+                  <div class="col-span-1"><span class="text-sm">18</span></div>
+                  <div class="col-span-1"><span class="text-sm text-red-500">19</span></div>
+                  <div class="col-span-1"><span class="text-sm">20</span></div>
+                  <div class="col-span-1"><span class="text-sm">21</span></div>
+                  <div class="col-span-1"><span class="text-sm">22</span></div>
+                  <!-- Hari Sabtu -->
+                  <div class="col-span-1">
+                    <div class="bg-green-500 text-white p-2 rounded-md"><span class="text-sm">14</span></div>
+                    <div class="mt-2 text-sm">Kegiatan B</div>
+                  </div>
+                  <div class="col-span-1"><span class="text-sm">23</span></div>
+                  <div class="col-span-1"><span class="text-sm">24</span></div>
+                  <div class="col-span-1"><span class="text-sm text-red-500">25</span></div>
+                  <div class="col-span-1"><span class="text-sm">26</span></div>
+                  <div class="col-span-1"><span class="text-sm">27</span></div>
+                  <div class="col-span-1"><span class="text-sm">28</span></div>
+                  <!-- Hari Sabtu -->
+                  <div class="col-span-1">
+                    <div class="bg-green-500 text-white p-2 rounded-md"><span class="text-sm">29</span></div>
+                    <div class="mt-2 text-sm">Kegiatan B</div>
+                  </div>
+                  <div class="col-span-1"><span class="text-sm">30</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <!-- script js -->
+    <script>
+      function setActive(element) {
+        const menuItems = document.querySelectorAll('.nav-item');
+        menuItems.forEach((item) => {
+          item.classList.remove('active');
+        });
+
+        element.classList.add('active');
+      }
+    </script>
+  </body>
+</html>

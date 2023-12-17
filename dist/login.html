@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  </head>
+  <body>
+    <style>
+      body {
+        background-image: url('./img/bg-login.png');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+    </style>
+    <!-- start header -->
+    <header class="bg-white py-4 fixed top-0 left-0 right-0 z-50">
+      <div class="container mx-auto flex justify-between items-center">
+        <!-- Logo or Site Name -->
+        <a href="#" class="text-2xl font-bold text-blue-500 mr-12">Logo </a>
+
+        <!-- Navigation -->
+        <nav class="space-x-8">
+          <a href="landing_page.html" class="hover:underline text-blue-500 font-semibold">Syarat dan Ketentuan</a>
+          <a href="landing_page.html" class="hover:underline text-blue-500 font-semibold">Posisi Magang</a>
+          <a href="landing_page.html" class="hover:underline text-blue-500 font-semibold">Fasilitas</a>
+          <a href="landing_page.html" class="hover:underline text-blue-500 font-semibold">Tentang Kami</a>
+        </nav>
+        <div class="flex space-x-4">
+          <a href="login.html" class="font-semibold bg-white text-blue-500 px-4 py-2 rounded-lg hover:bg-blue-700 hover:text-white">Login</a>
+          <a href="register.html" class="font-semibold bg-white text-blue-500 px-4 py-2 rounded-lg hover:bg-blue-700 hover:text-white">Register</a>
+        </div>
+      </div>
+    </header>
+    <!-- end header -->
+    <!-- start main -->
+    <main class="mb-16 mt-16">
+      <div class="grid grid-cols-2">
+        <div class="konten mt-36 ml-36 text-left block">
+          <img src="./img/bguiux.png" alt="" width="300px" class="mb-10" />
+          <h1 class="text-white text-2xl font-bold mb-3 flex">Beberapa klik lagi<br />untuk masuk ke akun Anda.</h1>
+          <p class="font-normal text-base mb-1 text-white opacity-50 flex">Semangat siswa SMK dan Mahasiswa</p>
+        </div>
+
+        <div class="max-w-md mx-auto mt-12">
+          <div class="mt-28 mr-12">
+            <h1 class="text-blue-700 text-2xl font-bold mb-6 text-left">Login</h1>
+
+            <form>
+              <div class="mb-4">
+                <label for="name" class="text-sm text-gray-600">Email</label>
+                <input type="text" name="name" id="name" class="w-full pl-3 pr-8 py-2 border rounded-md focus:outline-none focus:border-blue-500 mt-3" />
+              </div>
+
+              <div class="mb-2">
+                <label for="name" class="text-sm text-gray-600">Password</label>
+                <input type="password" name="password" id="password" class="w-full pl-3 pr-8 py-2 border rounded-md focus:outline-none focus:border-blue-500 mt-3" />
+              </div>
+
+              <div class="mt-2">
+                <a href="#" class="text-blue-500 text-sm ml-56">Lupa Password</a>
+              </div>
+
+              <div class="mt-8">
+                <a href="dashboard-user.html" class="w-full bg-blue-800 text-white py-2 px-9 rounded-md hover:bg-blue-800 focus:outline-none focus:border-blue-700">Login</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- end main -->
+  </body>
+</html>
